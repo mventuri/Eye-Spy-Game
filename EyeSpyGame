@@ -1,0 +1,44 @@
+var shapesImage = new Raster('http://upload.wikimedia.org/wikipedia/commons/6/6e/Similar-geometric-shapes.png', 250, 250);
+  
+shapesImage.scale(0.5);
+
+function onMouseDown(){
+
+  var answer1 = prompt('How many yellow shapes are there?');
+  var answer2 = prompt('How many triangles are there?');
+  var answer3 = prompt('How many shapes are there in total?');
+  var answer4 = prompt('How many one-sided shapes are there?');
+  
+  var score = 0;
+
+  if (answer1 == 4){
+    score ++;
+  } 
+  if (answer2 == 9){
+    score ++;
+  } 
+  if (answer3 == 31){
+    score ++;
+  }
+  if (answer4 == 14){
+    score ++;
+  }
+  
+  alert ('You scored ' + score + '/4');
+  
+}
+
+var tri = new Path.RegularPolygon(440, 100, 3, 20);
+tri.strokeWidth = '4';
+tri.fillColor = 'cornflowerBlue';
+tri.strokeColor = 'mediumBlue';
+
+var elli = new Path.Ellipse(235, 70, 40, 60);
+elli.strokeWidth = '4';
+elli.fillColor = 'lightGreen';
+elli.strokeColor = 'darkGreen';
+
+var rect = new Path.Rectangle(120, 80, 65, 25);
+rect.strokeWidth = '4';
+rect.fillColor = 'grey';
+rect.strokeColor = 'black';
